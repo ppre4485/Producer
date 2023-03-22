@@ -1,0 +1,539 @@
+{
+  "doc": "Response for a specific Order Request",
+  "fields": [
+    {
+      "name": "header",
+      "type": {
+        "fields": [
+          {
+            "doc": "Any unique identifier which may be used for de-duplication of messages during consumption",
+            "exmaple": "d59d8d8c-c781-11eb-b8bc-0242ac130003",
+            "name": "message_id",
+            "type": "string"
+          },
+          {
+            "doc": "Identifier for the seller who’s products are contained in the order",
+            "exmaple": "USBL, CABL etc.",
+            "name": "seller_id",
+            "type": "string"
+          },
+          {
+            "aliases": [
+              "site_id"
+            ],
+            "doc": "Operating company or distribution center number. [Use site_id instead of site]",
+            "name": "site",
+            "type": "string"
+          },
+          {
+            "doc": "Customer number as referenced within the seller’s system",
+            "name": "customer_number",
+            "type": "string"
+          },
+          {
+            "default": null,
+            "doc": "Identifier for the order as referenced within the seller’s system",
+            "name": "order_number",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "doc": "Delivery date of the order in the form of yyyy-MM-dd",
+            "example": "2021-11-16",
+            "name": "delivery_date",
+            "type": "string"
+          },
+          {
+            "doc": "The delivery method for the order",
+            "example": "GROUND, WILL_CALL etc.",
+            "name": "delivery_method",
+            "type": "string"
+          },
+          {
+            "default": null,
+            "doc": "Customer provided purchase order number",
+            "name": "customer_po_number",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "doc": "Identifier for the order as referenced within the ordering channel’s system",
+            "name": "channel_order_id",
+            "type": "string"
+          },
+          {
+            "default": false,
+            "doc": "Indicator to denote whether item allocation has taken place",
+            "name": "confirmed",
+            "type": "boolean"
+          },
+          {
+            "doc": "The date/time when the order request was processed",
+            "name": "order_processed_on",
+            "type": {
+              "example": "2021-11-16T18:42:53.479Z",
+              "logicalType": "timestmap-millis",
+              "type": "string"
+            }
+          },
+          {
+            "doc": "The channel used for submitting the order",
+            "example": "SHOP_WEB, SHOP_MOBILE, B2B etc.",
+            "name": "ordering_channel",
+            "type": "string"
+          },
+          {
+            "default": null,
+            "name": "extn",
+            "type": [
+              "null",
+              {
+                "fields": [
+                  {
+                    "default": null,
+                    "name": "miscellaneous_charges",
+                    "type": [
+                      "null",
+                      {
+                        "fields": [
+                          {
+                            "name": "type",
+                            "type": "string"
+                          },
+                          {
+                            "default": null,
+                            "name": "amount",
+                            "type": [
+                              "null",
+                              {
+                                "java-class": "java.math.BigDecimal",
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        ],
+                        "name": "Miscellaneous_Charges",
+                        "type": "record"
+                      }
+                    ]
+                  },
+                  {
+                    "default": null,
+                    "name": "order_suffix",
+                    "type": [
+                      "null",
+                      "int"
+                    ]
+                  },
+                  {
+                    "default": null,
+                    "name": "order_line_count",
+                    "type": [
+                      "null",
+                      "int"
+                    ]
+                  },
+                  {
+                    "default": null,
+                    "name": "total_lines_rejected",
+                    "type": [
+                      "null",
+                      "int"
+                    ]
+                  },
+                  {
+                    "default": false,
+                    "name": "new_record",
+                    "type": "boolean"
+                  },
+                  {
+                    "default": null,
+                    "name": "exception_level",
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  {
+                    "default": null,
+                    "name": "ship_with_next_order",
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  {
+                    "default": null,
+                    "name": "quantity_received_by_host",
+                    "type": [
+                      "null",
+                      "int"
+                    ]
+                  }
+                ],
+                "name": "Extn",
+                "type": "record"
+              }
+            ]
+          }
+        ],
+        "name": "Header",
+        "type": "record"
+      }
+    },
+    {
+      "name": "line_items",
+      "type": {
+        "items": {
+          "fields": [
+            {
+              "name": "item_number",
+              "type": "string"
+            },
+            {
+              "name": "line_number",
+              "type": "int"
+            },
+            {
+              "name": "order_quantity",
+              "type": "int"
+            },
+            {
+              "name": "confirmed_quantity",
+              "type": "int"
+            },
+            {
+              "name": "ordering_unit_of_measure",
+              "type": {
+                "name": "Ordering_Unit_Of_Measure",
+                "symbols": [
+                  "CS",
+                  "EA"
+                ],
+                "type": "enum"
+              }
+            },
+            {
+              "default": null,
+              "name": "price",
+              "type": [
+                "null",
+                {
+                  "java-class": "java.math.BigDecimal",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "default": null,
+              "name": "pricing_type",
+              "type": [
+                "null",
+                {
+                  "name": "Pricing_Type",
+                  "symbols": [
+                    "DEFAULT_PRICE",
+                    "HAND_PRICE",
+                    "SUB_HAND_PRICE",
+                    "LAST_MARGIN_PRICE",
+                    "LOCK_PRICE",
+                    "CLOUD_PRICE"
+                  ],
+                  "type": "enum"
+                }
+              ]
+            },
+            {
+              "default": false,
+              "name": "substituted_item",
+              "type": "boolean"
+            },
+            {
+              "default": null,
+              "name": "sub_reason_type",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "default": null,
+              "name": "original_item_number",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "default": null,
+              "name": "original_item_line_number",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "default": false,
+              "doc": "Indicator to denote whether the item has been allocated or not",
+              "name": "confirmed",
+              "type": "boolean"
+            },
+            {
+              "default": null,
+              "name": "item_extn",
+              "type": [
+                "null",
+                {
+                  "fields": [
+                    {
+                      "default": null,
+                      "name": "demand_quantity",
+                      "type": [
+                        "null",
+                        "int"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "stock_type",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "gross_commission_basis",
+                      "type": [
+                        "null",
+                        {
+                          "java-class": "java.math.BigDecimal",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "gross_price",
+                      "type": [
+                        "null",
+                        {
+                          "java-class": "java.math.BigDecimal",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "minimum_gross_price",
+                      "type": [
+                        "null",
+                        {
+                          "java-class": "java.math.BigDecimal",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "maximum_gross_price",
+                      "type": [
+                        "null",
+                        {
+                          "java-class": "java.math.BigDecimal",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "dollars_off",
+                      "type": [
+                        "null",
+                        {
+                          "java-class": "java.math.BigDecimal",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "default": false,
+                      "name": "guranteed_price",
+                      "type": "boolean"
+                    },
+                    {
+                      "default": null,
+                      "name": "available_stock",
+                      "type": [
+                        "null",
+                        "int"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "next_ship_date",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "next_ship_quantity",
+                      "type": [
+                        "null",
+                        "int"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "customer_item_number",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "pack",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "size",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "brand",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "description",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "default": false,
+                      "name": "new_record",
+                      "type": "boolean"
+                    }
+                  ],
+                  "name": "Item_Extn",
+                  "type": "record"
+                }
+              ]
+            }
+          ],
+          "name": "Line_Item",
+          "type": "record"
+        },
+        "type": "array"
+      }
+    },
+    {
+      "default": null,
+      "name": "exceptions",
+      "type": [
+        "null",
+        {
+          "fields": [
+            {
+              "name": "messages",
+              "type": {
+                "items": {
+                  "fields": [
+                    {
+                      "doc": "Identifier for the type of exception",
+                      "example": "header.exceptions, item.exceptions etc.",
+                      "name": "code",
+                      "type": "string"
+                    },
+                    {
+                      "default": null,
+                      "name": "message",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "name": "details",
+                      "type": {
+                        "items": {
+                          "fields": [
+                            {
+                              "doc": "Code for the specific exception",
+                              "name": "code",
+                              "type": "string"
+                            },
+                            {
+                              "name": "message",
+                              "type": "string"
+                            },
+                            {
+                              "default": null,
+                              "name": "value",
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            {
+                              "default": null,
+                              "name": "field",
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            {
+                              "default": null,
+                              "doc": "Line number related to the exception",
+                              "name": "location",
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          ],
+                          "name": "Details",
+                          "type": "record"
+                        },
+                        "type": "array"
+                      }
+                    }
+                  ],
+                  "name": "Message",
+                  "type": "record"
+                },
+                "type": "array"
+              }
+            }
+          ],
+          "name": "Exception",
+          "type": "record"
+        }
+      ]
+    }
+  ],
+  "name": "Order_Response",
+  "namespace": "ordering.cmd.response.v_0",
+  "type": "record"
+}

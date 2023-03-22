@@ -1,0 +1,1713 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.11
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 11
+[INFO] os.detected.release: ubuntu
+[INFO] os.detected.release.version: 20.04
+[INFO] os.detected.release.like.ubuntu: true
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] 
+[INFO] --------------------< io.confluent:clients-example >--------------------
+[INFO] Building clients-example 7.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> exec-maven-plugin:1.2.1:java (default-cli) > validate @ clients-example >>>
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ clients-example ---
+[INFO] Executing: /bin/sh -c cd '/home/pubudup/Desktop/work/localRepos/omni/poc_kafka_integration_/examples/clients/cloud/java' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /home/pubudup/Desktop/work/localRepos/omni/poc_kafka_integration_/examples/clients/cloud/java
+[INFO] Storing buildNumber: c5d56ffe2e615f493cceb8de54e877a8cb0533e1 at timestamp: 1638459712060
+[INFO] Storing buildScmBranch: 7.0.0-post
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-versions) @ clients-example ---
+[INFO] 
+[INFO] <<< exec-maven-plugin:1.2.1:java (default-cli) < validate @ clients-example <<<
+[INFO] 
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2.1:java (default-cli) @ clients-example ---
+[2021-12-02 21:11:52,286] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [lkc-dnvvy-ldvqz.us-east-1.aws.glb.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-demo-consumer-avro-1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = demo-consumer-avro-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig)
+[2021-12-02 21:11:52,356] INFO KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = USER_INFO
+	basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	proxy.host = 
+	proxy.port = -1
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [https://psrc-knmwm.us-east-2.aws.confluent.cloud]
+	specific.avro.reader = true
+	use.latest.version = false
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+ (io.confluent.kafka.serializers.KafkaAvroDeserializerConfig)
+[2021-12-02 21:11:52,962] INFO Successfully logged in. (org.apache.kafka.common.security.authenticator.AbstractLogin)
+[2021-12-02 21:11:53,086] WARN The configuration 'acks' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig)
+[2021-12-02 21:11:53,087] INFO Kafka version: 7.0.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+[2021-12-02 21:11:53,087] INFO Kafka commitId: c6d7e3013b411760 (org.apache.kafka.common.utils.AppInfoParser)
+[2021-12-02 21:11:53,087] INFO Kafka startTimeMs: 1638459713086 (org.apache.kafka.common.utils.AppInfoParser)
+[2021-12-02 21:11:53,096] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Subscribed to topic(s): b2b-test-4 (org.apache.kafka.clients.consumer.KafkaConsumer)
+[2021-12-02 21:11:56,434] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Cluster ID: lkc-dnvvy (org.apache.kafka.clients.Metadata)
+[2021-12-02 21:11:56,673] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Discovered group coordinator e-2290-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 2147483646 rack: null) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:11:57,012] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] (Re-)joining group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:11:59,857] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Request joining group due to: need to re-join with the given member-id (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:11:59,857] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] (Re-)joining group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,170] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Successfully joined group with generation Generation{generationId=44, memberId='consumer-demo-consumer-avro-1-1-f59be162-f899-4188-be49-d250b28072d5', protocol='range'} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,172] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Finished assignment for group at generation 44: {consumer-demo-consumer-avro-1-1-f59be162-f899-4188-be49-d250b28072d5=Assignment(partitions=[b2b-test-4-0, b2b-test-4-1, b2b-test-4-2, b2b-test-4-3, b2b-test-4-4, b2b-test-4-5])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,500] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Successfully synced group in generation Generation{generationId=44, memberId='consumer-demo-consumer-avro-1-1-f59be162-f899-4188-be49-d250b28072d5', protocol='range'} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,500] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Notifying assignor about the new Assignment(partitions=[b2b-test-4-0, b2b-test-4-1, b2b-test-4-2, b2b-test-4-3, b2b-test-4-4, b2b-test-4-5]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,504] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Adding newly assigned partitions: b2b-test-4-1, b2b-test-4-0, b2b-test-4-3, b2b-test-4-2, b2b-test-4-5, b2b-test-4-4 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,831] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Setting offset for partition b2b-test-4-1 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[e-2290-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 1 rack: 0)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,832] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Setting offset for partition b2b-test-4-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[e-255b-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 0 rack: 0)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,832] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Setting offset for partition b2b-test-4-3 to the committed offset FetchPosition{offset=28, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[e-2e2f-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 2 rack: 0)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,832] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Setting offset for partition b2b-test-4-2 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[e-210d-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 3 rack: 0)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,833] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Setting offset for partition b2b-test-4-5 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[e-2290-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 1 rack: 0)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+[2021-12-02 21:12:30,833] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Setting offset for partition b2b-test-4-4 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[e-255b-use1-az5-ldvqz.us-east-1.aws.glb.confluent.cloud:9092 (id: 0 rack: 0)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:36,579] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:37,739] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:38,871] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:40,121] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:41,342] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:42,572] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:43,831] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:45,132] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:46,381] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:47,691] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:48,919] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:50,252] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:51,479] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:52,811] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:53,969] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:55,099] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:56,251] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:57,416] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:58,595] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:12:59,808] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:01,030] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:02,250] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:03,460] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:04,718] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:05,918] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:07,146] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:08,400] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:09,606] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:10,935] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:12,173] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:13,392] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:14,621] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:15,871] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:17,008] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:18,138] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:19,336] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:20,477] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:21,639] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:22,915] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:24,108] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:25,374] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:26,519] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:27,866] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:28,979] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:30,128] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:31,313] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:32,461] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:33,700] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:34,897] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:36,039] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:37,229] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:38,389] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:39,539] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:40,698] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:41,962] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:43,208] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
+Consumed record with key 1 and value {"itemId": "2", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 28
+[2021-12-02 21:13:44,439] INFO [Consumer clientId=consumer-demo-consumer-avro-1-1, groupId=demo-consumer-avro-1] Seeking to offset 28 for partition b2b-test-4-3 (org.apache.kafka.clients.consumer.KafkaConsumer)
+retry parition: 3
+retry offset: 28
+Consumed record with key 1 and value {"itemId": "3", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 29
+Consumed record with key 1 and value {"itemId": "4", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 30
+Consumed record with key 1 and value {"itemId": "5", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 31
+Consumed record with key 1 and value {"itemId": "6", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 32
+Consumed record with key 1 and value {"itemId": "7", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 33
+Consumed record with key 1 and value {"itemId": "8", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 34
+Consumed record with key 1 and value {"itemId": "9", "name": "sample name", "description": "sample description"}
+parition: 3
+offset: 35
